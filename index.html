@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#0f1114">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Strateline Systems Group">
-<meta property="og:title" content="Strateline Systems Group: workflow &amp; systems design">
+<meta property="og:title" content="Strateline Systems Group: workflow and systems design">
 <meta property="og:description" content="Your workflow is a system. Was it ever designed like one? Workflow and systems design, rooted in media and post-production.">
 <meta property="og:url" content="https://stratelinesystemsgroup.com/">
 <meta property="og:image" content="https://stratelinesystemsgroup.com/og-image.png">
@@ -17,13 +17,13 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Strateline Systems Group: Your workflow is a system. Was it ever designed like one?">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Strateline Systems Group: workflow &amp; systems design">
+<meta name="twitter:title" content="Strateline Systems Group: workflow and systems design">
 <meta name="twitter:description" content="Workflow and systems design, rooted in media and post-production.">
 <meta name="twitter:image" content="https://stratelinesystemsgroup.com/og-image.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f1114'/%3E%3Crect x='6' y='9' width='20' height='3' rx='1.5' fill='%23e8a33d'/%3E%3Crect x='11' y='14.5' width='15' height='3' rx='1.5' fill='%23e8a33d'/%3E%3Crect x='6' y='20' width='20' height='3' rx='1.5' fill='%23e8a33d'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBmMTExNCIvPjxnIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyLjQiPjxnIHN0cm9rZT0iI2U4ZTZlMSI+PHBhdGggZD0iTTYgOUgxOSIvPjxwYXRoIGQ9Ik02IDE0LjVIMTUiLz48cGF0aCBkPSJNNiAyMEgxMSIvPjwvZz48cGF0aCBkPSJNNiAyNS41SDEyTDIxLjUgMTIiIHN0cm9rZT0iI2U4YTMzZCIvPjwvZz48Y2lyY2xlIGN4PSIyNCIgY3k9IjkiIHI9IjIuNiIgZmlsbD0iIzBmMTExNCIgc3Ryb2tlPSIjZThhMzNkIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0f1114;
@@ -36,7 +36,7 @@
     --accent-dim: rgba(232,163,61,.12);
     --serif: 'Fraunces', Georgia, serif;
     --sans: 'Inter', system-ui, sans-serif;
-    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --mono: 'Courier Prime', 'Courier New', ui-monospace, monospace;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -51,11 +51,17 @@
   nav { position: sticky; top: 0; z-index: 10; background: rgba(15,17,20,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
   nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
   .logo { font-family: var(--serif); font-weight: 600; font-size: 20px; letter-spacing: .2px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
-  .logo-mark { width: 22px; height: 22px; position: relative; }
-  .logo-mark span { position: absolute; left: 0; height: 3px; background: var(--accent); border-radius: 2px; }
-  .logo-mark span:nth-child(1) { top: 3px; width: 22px; }
-  .logo-mark span:nth-child(2) { top: 10px; width: 15px; left: 7px; }
-  .logo-mark span:nth-child(3) { top: 17px; width: 22px; }
+  .logo-mark { width: 38px; height: 32px; display: block; flex: none; }
+  .wordmark { text-decoration: none; color: inherit; }
+  .menu-btn { display: flex; align-items: center; gap: 8px; padding: 0; background: none; border: 0; color: var(--muted); font: inherit; cursor: default; pointer-events: none; -webkit-tap-highlight-color: transparent; }
+  .menu-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
+  .chev { display: none; width: 12px; height: 12px; flex: none; transition: transform .2s; }
+  .menu-btn.open .chev { transform: rotate(180deg); }
+  .menu { position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 18px 30px -12px rgba(0,0,0,.7); }
+  .menu[hidden] { display: none; }
+  .menu a { display: block; padding: 17px 24px; border-top: 1px solid var(--line); text-decoration: none; font-size: 17px; }
+  .menu a:first-child { border-top: 0; }
+  .menu a:hover, .menu a:focus-visible { background: var(--panel); color: var(--accent); outline: none; }
   .nav-links { display: flex; gap: 28px; font-size: 14px; }
   .nav-links a { text-decoration: none; color: var(--muted); transition: color .2s; }
   .nav-links a:hover { color: var(--text); }
@@ -63,7 +69,7 @@
 
   /* Hero */
   .hero { padding: 120px 0 100px; position: relative; overflow: hidden; }
-  .eyebrow { font-family: var(--mono); font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+  .eyebrow { font-family: var(--mono); font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
   h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(38px, 6vw, 68px); line-height: 1.08; letter-spacing: -1px; max-width: 880px; }
   h1 em { font-style: italic; color: var(--accent); }
   .lede { font-size: clamp(18px, 2vw, 21px); color: var(--muted); max-width: 640px; margin-top: 28px; }
@@ -75,14 +81,14 @@
   .btn-ghost:hover { background: var(--panel); }
 
   /* Timeline motif */
-  .timeline { margin-top: 80px; border-top: 1px solid var(--line); padding-top: 18px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .timeline { margin-top: 80px; border-top: 1px solid var(--line); padding-top: 18px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; font-family: var(--mono); font-size: 13px; color: var(--muted); }
   .timeline div { position: relative; padding-left: 14px; }
   .timeline div::before { content: ''; position: absolute; left: 0; top: 6px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
   .timeline b { display: block; color: var(--text); font-weight: 500; letter-spacing: .5px; }
 
   section { padding: 100px 0; }
   .alt { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .section-label { font-family: var(--mono); font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+  .section-label { font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
   h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(30px, 4vw, 44px); line-height: 1.15; letter-spacing: -.5px; max-width: 760px; }
   .section-intro { color: var(--muted); max-width: 620px; margin-top: 18px; }
 
@@ -95,7 +101,7 @@
   .services { margin-top: 56px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 34px; transition: border-color .2s; }
   .card:hover { border-color: #3a414a; }
-  .card .num { font-family: var(--mono); font-size: 12px; color: var(--accent); margin-bottom: 18px; }
+  .card .num { font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 18px; }
   .card h3 { font-family: var(--serif); font-weight: 500; font-size: 24px; margin-bottom: 12px; }
   .card p { color: var(--muted); font-size: 16px; }
 
@@ -133,7 +139,7 @@
   h3.sub { font-family: var(--serif); font-weight: 500; font-size: 26px; margin-top: 64px; }
   .lifecycle { margin-top: 32px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
   .lifecycle div { background: var(--bg); padding: 24px 20px; color: var(--muted); font-size: 15px; position: relative; }
-  .lifecycle span { font-family: var(--mono); font-size: 11px; color: var(--accent); display: block; margin-bottom: 10px; }
+  .lifecycle span { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--accent); display: block; margin-bottom: 10px; }
   .lifecycle b { display: block; font-family: var(--serif); font-weight: 500; font-size: 20px; color: var(--text); margin-bottom: 6px; }
   .principles { margin-top: 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .principles .card { background: var(--bg); }
@@ -143,7 +149,7 @@
   .steps { margin-top: 56px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; counter-reset: s; }
   .step { border-top: 2px solid var(--line); padding-top: 22px; }
   .step:first-child { border-color: var(--accent); }
-  .step .k { font-family: var(--mono); font-size: 12px; color: var(--accent); }
+  .step .k { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--accent); }
   .step h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; margin: 8px 0 10px; }
   .step p { color: var(--muted); font-size: 15px; }
 
@@ -153,7 +159,7 @@
   .portrait-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); display: block; }
   .about-body p { color: var(--muted); margin-top: 18px; }
   .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
-  .tags span { font-family: var(--mono); font-size: 12px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 100px; color: var(--muted); }
+  .tags span { font-family: var(--mono); font-size: 13px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 100px; color: var(--muted); }
 
   /* Contact */
   .contact { text-align: center; padding: 120px 0; }
@@ -166,6 +172,9 @@
 
   @media (max-width: 820px) {
     .nav-links a:not(.nav-cta) { display: none; }
+    .menu-btn { pointer-events: auto; cursor: pointer; padding: 6px 10px 6px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+    .menu-btn:hover { border-color: #3a414a; }
+    .chev { display: block; }
     .hero { padding: 72px 0 64px; }
     section { padding: 72px 0; }
     .problems, .services, .case, .about, .principles { grid-template-columns: 1fr; }
@@ -179,9 +188,12 @@
     .portrait, .portrait-img { max-width: 220px; }
     .case { gap: 36px; }
   }
+  @media (min-width: 821px) { .menu { display: none !important; } }
+  @media (prefers-reduced-motion: reduce) { .chev { transition: none; } html { scroll-behavior: auto; } }
   @media (max-width: 480px) {
     body { font-size: 16px; }
     .wrap { padding: 0 16px; }
+    .menu a { padding: 17px 20px; }
     .steps { grid-template-columns: 1fr; }
     .card { padding: 26px; }
     .problems div { padding: 22px; }
@@ -192,7 +204,7 @@
 
 <nav>
   <div class="wrap">
-    <a href="#top" class="logo"><span class="logo-mark"><span></span><span></span><span></span></span>Strateline</a>
+    <div class="logo"><button type="button" class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><svg class="logo-mark" viewBox="0 0 120 100" aria-hidden="true" focusable="false"><path d="M3 17V3h14" fill="none" stroke="#6b86a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M117 83v14h-14" fill="none" stroke="#e8a33d" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><g fill="none" stroke="#e8e6e1" stroke-width="5.5" stroke-linecap="round"><path d="M12 22H91"/><path d="M12 39H76"/><path d="M12 56H61"/></g><path d="M12 73H50L94 26.5" fill="none" stroke="#e8a33d" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="98" cy="22" r="6" fill="#0f1114" stroke="#e8a33d" stroke-width="4"/></svg><svg class="chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><a href="#top" class="wordmark">Strateline</a></div>
     <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#approach">Approach</a>
@@ -201,11 +213,18 @@
       <a href="#contact" class="nav-cta">Get in touch →</a>
     </div>
   </div>
+  <div id="site-menu" class="menu" hidden>
+    <a href="#services">Services</a>
+    <a href="#approach">Approach</a>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <header class="hero" id="top">
   <div class="wrap">
-    <div class="eyebrow">Workflow &amp; systems design, rooted in media</div>
+    <div class="eyebrow">Workflow and systems design, rooted in media</div>
     <h1>Your post workflow is a system. <em>Was it ever designed like one?</em></h1>
     <p class="lede">Strateline Systems Group designs and builds the production-management systems, automations, and workflows that keep media teams on schedule, built by someone who has run them from the inside.</p>
     <div class="btns">
@@ -251,7 +270,7 @@
       </div>
       <div class="card">
         <div class="num">03</div>
-        <h3>Automation &amp; AI Agents</h3>
+        <h3>Automation and AI Agents</h3>
         <p>Automations that remove the manual handoffs, built in the platforms you already run or the right ones to add. AI agents with instruction design that holds up under real production pressure.</p>
       </div>
       <div class="card">
@@ -356,6 +375,7 @@
       <h2>Built from inside the operation, not the sales deck.</h2>
       <p>Strateline Systems Group is led by Nathaniel Scates, who spent 20 years at Paramount (Viacom/CBS) as Senior Director. Along the way he led a facility-wide move from isolated edit storage to shared storage and media asset management, and later designed and built an enterprise production-management application that replaced a vendor-defined system. In 2026 he left Paramount to launch Strateline.</p>
       <p>That inside view is the difference. Strateline starts with how your people actually work, then builds the system around them, on whatever platform fits. No generic templates, no forcing your team into someone else's process or someone else's software.</p>
+      <p>Strateline is my practice. For projects that call for skills, expertise, or bandwidth beyond my own, I bring in trusted specialists and stay accountable for the result.</p>
       <p>Based in Nashville, working with teams anywhere.</p>
       <div class="tags">
         <span>Airtable</span><span>Power Platform</span><span>Power Automate</span><span>SharePoint</span><span>Zapier</span><span>AI agents</span><span>Avid ecosystems</span><span>Shared storage</span>
@@ -383,5 +403,29 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var btn = document.getElementById('menu-btn');
+  var menu = document.getElementById('site-menu');
+  var mq = window.matchMedia('(max-width: 820px)');
+  if (!btn || !menu) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    btn.classList.toggle('open', open);
+    menu.hidden = !open;
+  }
+  function sync() {
+    if (mq.matches) { btn.removeAttribute('tabindex'); btn.removeAttribute('aria-hidden'); }
+    else { btn.setAttribute('tabindex', '-1'); btn.setAttribute('aria-hidden', 'true'); setOpen(false); }
+  }
+  btn.addEventListener('click', function () { setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('nav')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { setOpen(false); if (mq.matches) btn.focus(); } });
+  if (mq.addEventListener) mq.addEventListener('change', sync); else mq.addListener(sync);
+  sync();
+})();
+</script>
 </body>
 </html>
