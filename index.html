@@ -69,7 +69,8 @@
 
   /* Hero */
   .hero { padding: 120px 0 100px; position: relative; overflow: hidden; }
-  .eyebrow { font-family: var(--mono); font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+  .eyebrow .sep { margin: 0 1em; color: var(--muted); }
+  .eyebrow { word-spacing: -.2em; font-family: var(--mono); font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
   h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(38px, 6vw, 68px); line-height: 1.08; letter-spacing: -1px; max-width: 880px; }
   h1 em { font-style: italic; color: var(--accent); }
   .lede { font-size: clamp(18px, 2vw, 21px); color: var(--muted); max-width: 640px; margin-top: 28px; }
@@ -118,7 +119,8 @@
   .quote { margin-top: 40px; padding: 28px 32px; border-left: 2px solid var(--accent); background: var(--accent-dim); border-radius: 0 8px 8px 0; font-family: var(--serif); font-size: 21px; line-height: 1.45; }
 
   .beyond { margin-top: 32px; max-width: 720px; color: var(--muted); font-size: 16px; padding: 20px 24px; border: 1px solid var(--line); border-radius: 10px; }
-  .beyond b { color: var(--accent); font-weight: 500; }
+  .beyond b { color: var(--accent); font-weight: 600; font-size: 1.3em; }
+  .case2 .section-label { font-size: 16px; }
 
   .case2 { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--line); max-width: 760px; }
   .case2 h3 { font-family: var(--serif); font-weight: 500; font-size: 28px; line-height: 1.2; margin-bottom: 18px; }
@@ -193,6 +195,7 @@
   @media (max-width: 480px) {
     body { font-size: 16px; }
     .wrap { padding: 0 16px; }
+    .eyebrow { font-size: 12px; letter-spacing: 1px; }
     .menu a { padding: 17px 20px; }
     .steps { grid-template-columns: 1fr; }
     .card { padding: 26px; }
@@ -224,9 +227,9 @@
 
 <header class="hero" id="top">
   <div class="wrap">
-    <div class="eyebrow">Workflow and systems design, rooted in media</div>
+    <div class="eyebrow">Media-rooted systems<span class="sep">|</span>Workflow design</div>
     <h1>Your post workflow is a system. <em>Was it ever designed like one?</em></h1>
-    <p class="lede">Strateline Systems Group designs and builds the production-management systems, automations, and workflows that keep media teams on schedule, built by someone who has run them from the inside.</p>
+    <p class="lede">Strateline Systems Group builds the production-management systems, automations, and workflows that keep media teams on schedule—designed by someone who has run them from the inside.</p>
     <div class="btns">
       <a href="#contact" class="btn btn-primary">Start a conversation</a>
       <a href="#work" class="btn btn-ghost">See the work</a>
@@ -243,7 +246,7 @@
 <section class="alt">
   <div class="wrap">
     <div class="section-label">Sound familiar?</div>
-    <h2>Most production teams don't have a tools problem. They have a workflow problem.</h2>
+    <h2>It's not a tools problem, it's a workflow problem.</h2>
     <div class="problems">
       <div>Show status lives in spreadsheets, inboxes, and one coordinator's head.</div>
       <div>A vendor tool forces your team into its workflow instead of yours.</div>
@@ -323,7 +326,7 @@
         <h3>The situation</h3>
         <p>I ran the team at Paramount responsible for receiving and formatting acquired programming. When the software we used to track our work and expenses was being retired, it was up to me to decide what came next.</p>
         <h3>The decision</h3>
-        <p>I chose not to recreate the old tool. I mapped the work through its whole life first, then ran a feasibility study on the platforms available. For that team, at that time, Airtable was the right fit, so I designed and built a <strong>new production-management system on Airtable</strong> around the four principles.</p>
+        <p>I chose not to recreate the old tool. Before selecting a platform, I mapped the entire production lifecycle and the team's current processes, identified the opportunities for improvement, and then picked the tech. For that team, at that time, Airtable was the right fit, so I designed and built a <strong>new production-management system on Airtable</strong> around the four principles.</p>
         <p>For another team, the right answer might be a different platform. The approach is what carries over.</p>
       </div>
       <div class="stats">
